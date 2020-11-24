@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PraktikumFragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tab_text_2">Home</string>
+    <string name="tab_text_1">Nama</string>
+    <string name="tab_text_3">NPM</string>
+</resources>
