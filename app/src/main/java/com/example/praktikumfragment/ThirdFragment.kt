@@ -1,5 +1,4 @@
 package com.example.praktikumfragment
-
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,13 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.textfield.TextInputEditText
-
 class ThirdFragment : Fragment() {
 
     private var communicationViewModel: CommunicationViewModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //deklarasi viewModel saat onCreate
         communicationViewModel =
                 ViewModelProviders.of(requireActivity()).
                 get(CommunicationViewModel::class.java)
@@ -29,6 +28,7 @@ class ThirdFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //sc input data ke textboxt
         val nameEditText = view.findViewById<TextInputEditText>(R.id.textInputnpm)
         nameEditText.addTextChangedListener(
                 object : TextWatcher {

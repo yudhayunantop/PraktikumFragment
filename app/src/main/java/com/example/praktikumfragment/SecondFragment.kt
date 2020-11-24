@@ -1,5 +1,4 @@
 package com.example.praktikumfragment
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-
 class SecondFragment : Fragment() {
 
     private var communicationViewModel: CommunicationViewModel? = null
@@ -17,6 +15,7 @@ class SecondFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //deklarasi viewModel saat onCreate
         communicationViewModel = ViewModelProviders.
         of(requireActivity()).
         get(CommunicationViewModel::class.java)
@@ -33,6 +32,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
         super.onViewCreated(view, savedInstanceState)
+        //set data yang diinput dari textboxt
         txtName = view.findViewById(R.id.textViewName)
         txtNPM = view.findViewById(R.id.textViewNPM)
 
@@ -47,5 +47,4 @@ class SecondFragment : Fragment() {
             return SecondFragment()
         }
     }
-
 }
